@@ -1,0 +1,23 @@
+{
+	"name": "supreme-stylus",
+	"description": "Stylus mixins and utilities",
+	"version": "0.0.1",
+		"repository": {
+			"type": "git",
+			"url": "https://github.com/droganov/supreme-stylus.git"
+		},
+	"dependencies": {
+		"stylus": "0.41.x",
+		"nib": "1.x"
+	},
+	"author": {
+		"name": "Serge Droganov",
+		"email": "serge@droganov.ru"
+	},
+	"main": "lib/supreme-stylus.js",
+	"engines": {
+		"node": "*"
+	},
+	"readme": "I just started working on the project. Nothing is ready yet.",
+	"readmeFilename": "Readme.md"
+}
