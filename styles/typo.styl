@@ -1,0 +1,64 @@
+// tags
+a
+	color ss-blue
+	text-decoration none
+	background: linear-gradient(left, rgba(ss-blue, .2) 50%, rgba(ss-blue, .2)  100%)
+	background-position: 0 90%
+	background-size: 10px 1px
+	background-repeat: repeat-x
+	&:hover
+		color lighten(ss-blue, 20)
+
+body
+	@extends .ptSans
+	color ss-black
+	font-size 14px
+	line-height 20px
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+	@extends .ptSansCaption
+	font-weight 500
+	small, .small
+		color ss-grey
+		font-size 63%
+
+h1, h2, h3, .h1, .h2, .h3
+	line-height 40px
+
+h4, h5, h6, .h4, .h5, .h6
+	line-height 30px
+
+h1, .h1
+	font-size 260%
+h2, .h2
+	font-size 230%
+h3, .h3
+	font-size 200%
+h4, .h4
+	font-size 170%
+h5, .h5
+	font-size 140%
+h6, .h6
+	font-size 110%
+
+p
+	word-spacing: 0.125em
+	hyphenate: auto
+	hyphenate-lines: 3
+	&::after
+		content:"\0000a0"
+		display: block
+		visibility:hidden
+
+// Class helpers
+
+.local
+	@extends a
+	background: linear-gradient(left, ss-blue, rgba(ss-blue, .01) 50%, transparent 50%)
+	background-position: 0 90%
+	background-size: 2px 1px
+	background-repeat: repeat-x
+	cursor: pointer
+	
+.narrow
+	@extends .ptSansNarrow
