@@ -9,11 +9,29 @@ a
 	&:hover
 		color lighten(ss-blue, 20)
 
+abbr, acronym, .uppercase
+	font-size: 85%
+	text-transform: uppercase
+	letter-spacing: .1em
+
+b, strong, caption, th, thead, dt, legend, .bold, .strong
+	font-weight: bold
+
+big, .big, .large
+	font-size 130%
+.loose
+	line-height ss-typo-line-height-loose
+.tight
+	line-height ss-typo-line-height-tight
+.lead
+	@extends .loose
+	font-size 150%
+
 body
 	@extends .ptSans
 	color ss-black
-	font-size 14px
-	line-height 20px
+	font-size ss-typo-font-size
+	line-height ss-typo-line-height
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	@extends .ptSansCaption
@@ -45,10 +63,15 @@ p
 	word-spacing: 0.125em
 	hyphenate: auto
 	hyphenate-lines: 3
-	&::after
-		content:"\0000a0"
-		display: block
-		visibility:hidden
+	+ p
+		&::before
+			content:"\0000a0"
+			display: block
+			visibility:hidden
+
+small, sup, sub, .small, .sup, .sub
+	font-size 85%
+
 
 // Class helpers
 

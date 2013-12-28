@@ -1,10 +1,47 @@
 @import "nib"
 
-ss-grey 		= #808285
-ss-black 		= #3c3c3b
+ss-grey 							?= #808285
+ss-black 							?= #3c3c3b
+ss-blue 							?= #0071bc
+ss-body-font-size 					?= 14px
+ss-hr-color 						?= #ddd
 
-ss-blue 		= #0071bc
+// ui colors
+ss-color-ui-dark-text 				?= ss-black
+ss-color-ui-light-text 				?= #fff
+ss-color-ui-default 				?= #F2F2F2
+ss-color-ui-alert					?= #E94E1B
+ss-color-ui-normal					?= #0071BC
+ss-color-ui-success					?= #00AD83
+ss-color-ui-warning					?= #FDDF4F
+
 
 @import "styles/reset"
 @import "styles/font"
+
+// typography
+ss-typo-font-size 					?= 14px
+ss-typo-line-height 				?= 20px
+ss-typo-line-height-loose 			?= 30px
+ss-typo-line-height-tight 			?= 15px
+
 @import "styles/typo"
+
+// grid
+ss-column-width 					?= 100% / 12
+@import "styles/grid"
+@import "styles/nav"
+
+
+// form
+ss-input-border-color-valid 		?= #55BCB5
+ss-input-focus-border-color 		?= #98a8b1
+ss-input-place-holder-textColor 	?= #ccc
+ss-input-shadow-params 				?= 1px 1px 2px rgba(0, 0, 0, .25)
+ss-input-focus-shadow-params 		?= 0px 0px 18px rgba(87, 182, 247, .4)
+@import "styles/form"
+
+
+
+// components
+@import "styles/mixins/btn-group-vertical"

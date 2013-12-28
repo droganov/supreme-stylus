@@ -1,0 +1,134 @@
+// СКРУГЛЕНИЯ
+.hard
+	border-radius 0
+.soft
+	border-radius 3px
+
+label
+	font-weight normal
+	display inline-block
+	margin-right 1em
+// label::after
+// 	content "11111"
+label.block
+	text-align left
+	display block
+	
+
+fieldset
+	border 0px solid ss-hr-color
+	margin 0 -30px
+	margin-bottom 10px
+	padding 0px 30px
+	position: relative
+
+legend
+	font-size 18px
+	font-weight: normal
+	margin 0
+	padding 0
+	position: relative
+	top 5px
+
+input[type="text"]
+	@extends .soft
+	@extends .hang
+	background-color #fff
+	border 1px solid ss-hr-color
+	box-shadow(ss-input-shadow-params)
+	color ss-black
+	height 30px
+	margin-bottom .5em
+	padding-left 15px
+	padding-right 15px
+	transition-property(box-shadow)
+	transition-duration(.3s)
+	transition-timing-function(ease-out)
+	vertical-align baseline
+	&:focus
+		border-color ss-input-focus-border-color
+		box-shadow(ss-input-focus-shadow-params)
+	&:required:valid
+		border-color ss-input-border-color-valid
+	&.tight
+		height 20px
+	&.loose
+		height 40px
+	&.fluid
+		width 100%
+
+	
+
+input[type="password"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"],
+input[type="email"], input[type="month"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"],
+input[type="url"], input[type="week"], textarea, select
+	@extend input[type="text"]
+select
+	height 2.65em
+	background white
+
+input[type="submit"], input[type="button"], button, .button, .btn
+	@extends .soft
+	@extends .hang
+	background ss-color-ui-default
+	box-sizing border-box
+	color lightness(ss-color-ui-default) < 60% ? ss-color-ui-light-text : ss-color-ui-dark-text
+	cursor: pointer
+	border 0
+	border-bottom 3px solid darken(ss-color-ui-default, 15)
+	display inline-block
+	font-size ss-body-font-size
+	height ss-typo-line-height * 1.5
+	line-height ss-typo-line-height * 1.5
+	padding: 0 15px
+	position:relative	
+	vertical-align baseline
+	&:hover
+		color lightness(ss-color-ui-default) < 60% ? ss-color-ui-light-text : ss-color-ui-dark-text
+	&:active
+		box-shadow: inset 0 0 30px darken(ss-color-ui-default, 9)
+		transform: translate(0, 1px)
+	&.tight
+		height ss-typo-line-height
+		line-height ss-typo-line-height
+	&.loose
+		@extends .large
+		height 40px
+	&.fluid
+		width 100%
+	&.alert
+		background-color ss-color-ui-alert
+		border-bottom-color darken(ss-color-ui-alert, 10)
+		color lightness(ss-color-ui-alert) < 60% ? ss-color-ui-light-text : ss-color-ui-dark-text
+		&:active
+			box-shadow: inset 0 0 30px darken(ss-color-ui-alert, 9)
+	&.normal
+		background-color ss-color-ui-normal
+		border-bottom-color darken(ss-color-ui-normal, 10)
+		color lightness(ss-color-ui-normal) < 60% ? ss-color-ui-light-text : ss-color-ui-dark-text
+		&:active
+			box-shadow: inset 0 0 30px darken(ss-color-ui-normal, 9)
+	&.warning
+		background-color ss-color-ui-warning
+		border-bottom-color darken(ss-color-ui-warning, 10)
+		color lightness(ss-color-ui-warning) < 60% ? ss-color-ui-light-text : ss-color-ui-dark-text
+		&:active
+			box-shadow: inset 0 0 30px darken(ss-color-ui-warning, 9)
+	&.success
+		background-color ss-color-ui-success
+		border-bottom-color darken(ss-color-ui-success, 10)
+		color lightness(ss-color-ui-success) < 60% ? ss-color-ui-light-text : ss-color-ui-dark-text
+		&:active
+			box-shadow: inset 0 0 30px darken(ss-color-ui-success, 9)
+
+form
+	&.busy
+		input[type="submit"]
+			opacity .3
+
+::-webkit-input-placeholder {
+    color: ss-input-place-holder-textColor
+}	
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: ss-input-place-holder-textColor;
+}

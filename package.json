@@ -1,23 +1,32 @@
 {
-	"name": "supreme-stylus",
-	"description": "Stylus mixins and utilities",
-	"version": "0.0.1",
-		"repository": {
-			"type": "git",
-			"url": "https://github.com/droganov/supreme-stylus.git"
-		},
-	"dependencies": {
-		"stylus": "0.41.x",
-		"nib": "1.x"
-	},
-	"author": {
-		"name": "Serge Droganov",
-		"email": "serge@droganov.ru"
-	},
-	"main": "lib/supreme-stylus.js",
-	"engines": {
-		"node": "*"
-	},
-	"readme": "I just started working on the project. Nothing is ready yet.",
-	"readmeFilename": "Readme.md"
+  "name": "supreme-stylus",
+  "description": "Stylus mixins and utilities",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/droganov/supreme-stylus.git"
+  },
+  "dependencies": {
+    "stylus": "0.41.x",
+    "nib": "1.x"
+  },
+  "author": {
+    "name": "Serge Droganov",
+    "email": "serge@droganov.ru"
+  },
+  "main": "lib/supreme-stylus.js",
+  "engines": {
+    "node": "*"
+  },
+  "readme": "I just started working on the project. Nothing is ready yet.",
+  "readmeFilename": "Readme.md",
+  "bugs": {
+    "url": "https://github.com/droganov/supreme-stylus/issues"
+  },
+  "_id": "supreme-stylus@0.0.1",
+  "dist": {
+    "shasum": "e943d01d7dcca3c74ab8a17c52764b77925a98b3"
+  },
+  "_resolved": "git+https://github.com/droganov/supreme-stylus.git#8f77d19e1605bcac2c3c38a23095673f9d9faa03",
+  "_from": "supreme-stylus@git+https://github.com/droganov/supreme-stylus.git"
 }
