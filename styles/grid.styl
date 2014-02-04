@@ -51,7 +51,8 @@ col(n)
 	position relative
 	width: ss-column-width * n
 	&:hover
-		outline 1px dotted #ccc
+		body.dev &
+			outline 1px dotted #ccc
 
 shiftRight(n)
 	n ?= 0
