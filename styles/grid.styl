@@ -16,6 +16,9 @@ body
 
 .container
 	min-width 1200px
+	margin 0 auto
+	position relative
+	zoom:1
 	// Meduim Desktops
 	@media (min-width: 992px)
 		body.responsive &
@@ -24,8 +27,6 @@ body
 	@media (max-width: 992px)
 		body.responsive &
 			min-width 320px
-	margin 0 auto
-	zoom:1
 	&::before, &::after
 		content:""
 		display:table
