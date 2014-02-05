@@ -1,15 +1,29 @@
 // tags
 body
 	min-width 1200px
-	&.responsive
-		min-width 320px		
+	// Meduim Desktops
+	@media (min-width: 992px)
+		body.responsive &
+			min-width 992px
+	// Handsets
+	@media (max-width: 992px)
+		body.responsive &
+			min-width 320px
 		
 // Helpers
 .clearfix, .clear
 	clear:both
 
 .container
-	max-width 1200px
+	min-width 1200px
+	// Meduim Desktops
+	@media (min-width: 992px)
+		body.responsive &
+			min-width 992px
+	// Handsets
+	@media (max-width: 992px)
+		body.responsive &
+			min-width 320px
 	margin 0 auto
 	zoom:1
 	&::before, &::after
