@@ -30,15 +30,15 @@ legend
 
 input[type="text"]
 	@extends .soft
-	@extends .hang
 	background-color #fff
 	border 1px solid ss-hr-color
 	box-shadow(ss-input-shadow-params)
 	color ss-black
 	height 30px
+	margin 0 -5px
 	margin-bottom .5em
-	padding-left 15px
-	padding-right 15px
+	padding-left 5px
+	padding-right 5px
 	transition-property(box-shadow)
 	transition-duration(.3s)
 	transition-timing-function(ease-out)
@@ -67,7 +67,6 @@ select
 
 input[type="submit"], input[type="button"], button, .button, .btn
 	@extends .soft
-	@extends .hang
 	background ss-color-ui-default
 	box-sizing border-box
 	color lightness(ss-color-ui-default) < 60% ? ss-color-ui-light-text : ss-color-ui-dark-text
@@ -78,7 +77,8 @@ input[type="submit"], input[type="button"], button, .button, .btn
 	font-size ss-body-font-size
 	height ss-typo-line-height * 1.5
 	line-height ss-typo-line-height * 1.5
-	padding: 0 15px
+	margin 0 -5px
+	padding: 0 5px
 	position:relative	
 	vertical-align baseline
 	&:hover
