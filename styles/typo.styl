@@ -88,3 +88,16 @@ sup, .sup, sub, .sub
 	
 .narrow
 	@extends .ptSansNarrow
+
+// Mixins
+fade()
+	overflow hidden
+	position relative
+	white-space nowrap
+	&::after
+		content ""
+		display block
+		absolute top right
+		height 100%
+		width 3em
+		background linear-gradient(left, rgba(ss-white, 0), rgba(ss-white, 1)  80%)
