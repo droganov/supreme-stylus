@@ -14,24 +14,6 @@ body
 .clearfix, .clear
 	clear:both
 
-.container
-	min-width 1200px
-	margin 0 auto
-	position relative
-	zoom:1
-	// Meduim Desktops
-	@media (min-width: 992px)
-		body.responsive &
-			min-width 992px
-	// Handsets
-	@media (max-width: 992px)
-		body.responsive &
-			min-width 320px
-	&::before, &::after
-		content:""
-		display:table
-	&::after
-		clear:both
 .content-box
 	padding-top 20px !important
 	padding-bottom 20px !important
@@ -57,14 +39,15 @@ clearfix()
 		display:table
 	&::after
 		clear:both
-col(n)
+col(n, c)
 	n ?= 1
+	c ?= 12
 	box-sizing border-box
 	display block
 	float: left
 	padding 0 15px
 	position relative
-	width: ss-column-width * n
+	width: (100% / c) * n
 	&:hover
 		body.dev &
 			outline 1px dotted #ccc
