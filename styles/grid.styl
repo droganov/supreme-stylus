@@ -18,12 +18,17 @@ col(n=1, c=12)
 	&:hover
 		body.dev &
 			outline 1px dotted #ccc
-shiftRight(n)
-	n ?= 0
-	left: ss-column-width * n
-shiftLeft(n)
-	n ?= 0
-	right: ss-column-width * n
+
+offset(n=0, c=12)
+	margin-left getColumnWidth(c) * n
+shift(n=0, c=12)
+	left getColumnWidth(c) * n
+
+// Obsolete
+shiftRight(n=0)
+	shift n
+shiftLeft(n=0)
+	shift n * (-1)
 
 setContentBounds(default=1200px, handsets=320px)
 	min-width default
