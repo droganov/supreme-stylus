@@ -32,6 +32,11 @@ shiftLeft(n=0)
 
 setContentBounds(default=1200px, handsets=320px)
 	min-width default
+	// Meduim Desktops
+	@media (min-width: 992px)
+		body.responsive &
+			max-width none
+		
 	// Handsets
 	@media (max-width: 992px)
 		&.responsive
