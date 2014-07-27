@@ -90,7 +90,9 @@ sup, .sup, sub, .sub
 	@extends .ptSansNarrow
 
 // Mixins
-fade()
+fade(from, to)
+	from 	?= ss-white
+	to 		?= ss-white
 	overflow hidden
 	position relative
 	white-space nowrap
@@ -100,4 +102,4 @@ fade()
 		absolute top right
 		height 100%
 		width 3em
-		background linear-gradient(left, rgba(ss-white, 0), rgba(ss-white, 1)  80%)
+		background linear-gradient(left, rgba(from, 0), rgba(to, 1)  80%)
