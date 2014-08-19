@@ -90,9 +90,7 @@ sup, .sup, sub, .sub
 	@extends .ptSansNarrow
 
 // Mixins
-fade(from, to)
-	from 	?= ss-white
-	to 		?= ss-white
+fade(from = ss-white, to = ss-white)
 	overflow hidden
 	position relative
 	white-space nowrap
